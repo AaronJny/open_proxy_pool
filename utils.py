@@ -25,6 +25,7 @@ def get_logger(name=__name__):
     :return:
     """
     logger = logging.getLogger(name)
+    logger.handlers.clear()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter(
         '%(asctime)s - %(name)s - %(levelname)s: - %(message)s',

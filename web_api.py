@@ -43,7 +43,7 @@ def total_ip():
     """
     total = redis_client.zcard(ip_pool_key)
     if total:
-        return total
+        return str(total)
     else:
         return '0'
 
